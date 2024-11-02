@@ -1,0 +1,241 @@
+.nav-link.active, .navbar-nav .nav-link.show{
+    position: relative;
+}.nav-link.active::before, .navbar-nav .nav-link.show{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    bottom: 7px;
+    left:5px;
+    animation: border 1s ;
+}
+@keyframes border {
+    from{
+        width: 0;
+    }
+    to{
+        width: 90%;
+    }
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.4)),url(../imgs/bg.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+.headerslider{
+    padding-right: 10px;
+    border-right: 1px solid white;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s ease-in-out width;
+    cursor: pointer;
+    animation: slider 0.3s  infinite;
+}
+@keyframes slider {
+    from{
+        border-color: transparent;
+    }
+    to{
+        border-color: white;
+    }
+}
+header .icons i{
+    cursor: pointer;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 5px;
+}
+.headerslider:hover{
+    width: 420px;
+}
+section#about button,
+section#contact button{
+    transition: 0.5s;
+}
+section#about button a{
+    text-decoration: none;
+    color: black;
+}
+section#about button:hover a{
+
+    color: white;
+}
+section#about .btn.btn-dark:hover,
+section#contact .btn.btn-dark:hover{
+    background-color: white;
+    color: black;
+}
+section#about .content{
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+section#about .imag{
+    background-position: center;
+    background-image: url(../imgs/dots.png);
+    
+}
+.title h2{
+font-weight: bold;
+font-size: 55px;
+position: relative;
+width: fit-content;
+margin: auto;
+}
+.title h2:before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-image: url(../imgs/dots.png);
+    position: absolute;
+    bottom: 0;
+}
+.cardss{
+    position: relative;
+}
+section#portfolio .layer{
+    position: absolute;
+    inset: 8px;
+    background-color: rgba(255, 255, 255, 0.553);
+    transition: 1s;
+    opacity: 0;
+}
+.layer span{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+section#portfolio .cardss:hover .layer{
+    opacity: 1;
+}
+.layer span i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.layer span i:hover{
+    color: black;
+    background-color: white;
+}
+section#services .cards{
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-block: 10px;
+    cursor: pointer;
+}
+section#services .cards i{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+section#services .cards:hover i{
+    color: white;
+    background-color: black;
+} 
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.carousel-indicators .active{
+    background-color: rgb(71, 113, 7);
+    
+}
+.carousel-indicators [data-bs-target]:hover{
+    background-color: rgb(71, 113, 7);
+
+}
+.w-10{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.carousel-indicators{
+    position: static;
+
+}
+section#team .cards{
+    overflow: hidden;
+    background-color: rgba(52, 52, 52, 0.8);
+    text-align: center;
+}
+section#team .layer{
+    position: absolute;
+    inset: 8px;
+    background-color: rgba(255, 255, 255, 0.553);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+section#team .layer span{
+    justify-content: center;
+    align-items: center;
+}
+section#team .cards:hover .layer{
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+section#team .images img{
+    transition: 0.5s  ;
+}
+section#team .images{
+    overflow: hidden;
+    height: 400px;
+}
+section#team .images:hover img{
+    transform: scale(1.3);
+}
+section#contact span i{
+    width: 60px;
+    height: 60px;
+    transition: 0.5s;
+    font-size: 30px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+section#contact .cards:hover i{
+    background-color: black !important;
+    color: white;
+}
+.form-control{
+    border: none;
+    box-shadow: none;
+
+}
+textarea{
+    height: 100px;
+}
+.form-control:focus{
+    border: none;
+    box-shadow: none;
+}
